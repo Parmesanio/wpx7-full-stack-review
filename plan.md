@@ -22,6 +22,8 @@
     * proxy
         * remember special proxy for use with Auth0
 * middlewares (might not have today but will likely have later on)
+* db folder 
+    * init.sql
 
 ## Routes 
 * /auth/callback
@@ -87,3 +89,11 @@
 
 for likes, you'd probably want a separate table 
 * likes
+
+* sql statements
+    * get_memes_by_user_id
+    * get_user_by_auth0_id
+    * create_user
+    * delete_meme?
+    * update_meme?
+    

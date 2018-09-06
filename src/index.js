@@ -2,7 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import { Provider } from 'react-redux';
+// import store from './ducks/store';
+// import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Add this import:
+import { AppContainer } from 'react-hot-loader';
+
+// Wrap the rendering in a function:
+const render = () => {
+    ReactDOM.render(
+    // Wrap App inside AppContainer
+    <AppContainer>
+        <App />
+    </AppContainer>,
+    document.getElementById('root')
+    );
+};
+
+// Render once
+render();
+
+// Webpack Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    render();
+  });
+}
