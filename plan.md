@@ -21,7 +21,7 @@
 * add a `main` to `package.json`
     * proxy
         * remember special proxy for use with Auth0
-* middlewares (might not have today but will likely have later on)
+* middlewares (won't have today but will likely have later on)
 * db folder 
     * init.sql
 
