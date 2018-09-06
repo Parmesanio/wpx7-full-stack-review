@@ -58,6 +58,10 @@
 * action creators
     * type
     * payload 
+    * list 
+        *login
+        *logout
+        *set memes
     * action types/names
 * initial state
     * user (user is something good for global state)

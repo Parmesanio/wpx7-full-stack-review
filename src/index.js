@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { HashRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 // import { Provider } from 'react-redux';
 // import store from './ducks/store';
 // import { BrowserRouter } from 'react-router-dom';
@@ -14,11 +16,13 @@ import { AppContainer } from 'react-hot-loader';
 const render = () => {
     ReactDOM.render(
     // Wrap App inside AppContainer
-    <HashRouter>
-    <AppContainer>
-        <App />
-    </AppContainer>
-    </HashRouter>,
+    <Provider store={store}>
+      <HashRouter>
+        <AppContainer>
+            <App />
+        </AppContainer>
+      </HashRouter>
+    </Provider>,
     document.getElementById('root')
     );
 };
