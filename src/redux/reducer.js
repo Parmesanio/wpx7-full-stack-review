@@ -9,7 +9,7 @@ const initialState = {
 }
 
 // action type: the name of what happened. something happened in the system. system sent a message to store reducer. 
-// const SET_MEMES_LIST = "HANDLE_GET_MEMES_LIST";
+const SET_MEMES_LIST = "SET_MEMES_LIST";
 const LOGGED_IN = "LOGGED_IN";
 const LOGGED_OUT = "LOGGED_OUT";
 
@@ -19,8 +19,8 @@ export default function reducer(state=initialState, action) {
             return {...state, user: action.payload};
         case LOGGED_OUT:
             return {...state, user: null}
-    
-
+        case SET_MEMES_LIST: 
+            return {...state, memesList: action.payload}
         default: 
             return state;
     }
@@ -37,4 +37,10 @@ export function logOut() {
     return {
         type: LOGGED_OUT
     } 
+}
+export function setMemes(memesList) {
+    return {
+        type: SET_MEMES_LIST,
+        payload: memesList
+    }
 }

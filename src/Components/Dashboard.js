@@ -9,7 +9,6 @@ class Dashboard extends Component {
         axios.get('/api/user-data').then(response => {
             const user = response.data;
             this.props.logIn(user);
-            this.props.logOut();
         })
     }
 

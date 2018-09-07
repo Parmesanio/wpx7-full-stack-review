@@ -7,10 +7,11 @@ body {
 nav {
   display: flex;
   justify-content: space-around;
-  background: cornflowerblue;
   align-items: center;
+  background: cornflowerblue;
   border-radius: 20px;
   height: 50px;
+  padding: 10px;
 }
 
 nav a {
